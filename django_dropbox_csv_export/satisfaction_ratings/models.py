@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
+class SatisfactionRating(models.Model):
+    customer_name = models.CharField(max_length=300)
+    score = models.IntegerField()
