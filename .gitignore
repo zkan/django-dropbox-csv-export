@@ -103,3 +103,4 @@ ENV/
 *.swp
 *.sqlite3
 *.csv
+*.env
