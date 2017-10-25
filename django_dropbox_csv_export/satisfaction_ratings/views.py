@@ -64,8 +64,8 @@ def index(request):
 
 
 def get_dropbox_auth_flow(web_app_session):
-    redirect_uri = 'https://c64fc520.ngrok.io/satisfaction-ratings/' \
-        'dropbox-auth-finish/'
+    redirect_uri = os.environ.get('DOMAIN_URL', '') + \
+        reverse('dropbox_auth_finish')
     return DropboxOAuth2Flow(
         APP_KEY,
         APP_SECRET,

@@ -91,8 +91,7 @@ class DropboxOAuthTest(TestCase):
         )
 
     def test_get_dropbox_auth_flow_should_call_dropbox_oauth_2_flow(self):
-        redirect_uri = 'https://c64fc520.ngrok.io' \
-            f'{reverse("dropbox_auth_finish")}'
+        redirect_uri = reverse('dropbox_auth_finish')
 
         with patch('satisfaction_ratings.views.DropboxOAuth2Flow') as mock:
             get_dropbox_auth_flow('session')
