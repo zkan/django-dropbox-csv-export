@@ -4,7 +4,7 @@ from ..models import SatisfactionRating
 
 
 class SatisfactionRatingTest(TestCase):
-    def test_save_board(self):
+    def test_save_satisfaction_rating(self):
         satisfaction_rating = SatisfactionRating()
         satisfaction_rating.customer_name = 'Pronto'
         satisfaction_rating.score = 9
